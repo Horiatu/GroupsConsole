@@ -25,7 +25,7 @@ define({
     "webmap": "e3a14397aab947269c5b4abebe0eacc2",//"326320c9eab3489d8d17bc389ce1e023",
     "oauthappid": null, //"AFTKRmv16wj14N3z",
     //Group templates must support a group url parameter. This will contain the id of the group.
-    //group: "",
+    group: "d499e0c093fd409299ebcbc3c60ba369",
     //Enter the url to the proxy if needed by the application. See the 'Using the proxy page' help topic for details
     //http://developers.arcgis.com/en/javascript/jshelp/ags_proxy.html
     "proxyurl": "",
@@ -43,7 +43,7 @@ define({
     //both these values must be specified as hex colors.
     "theme": "#a00055",
     "color": "#ffffff",
-    "hoverColor": "#e22211",
+    "hoverColor": "#adff2f",
     "focusColor": "#00C5FF",
     "activeColor": "#700070",
     //Specify the tool icon color for the tools on the toolbar and the menu icon.
@@ -73,10 +73,7 @@ define({
     "locationSearch": true,
     //When searchExtent is true the locator will prioritize results within the current map extent.
     "searchExtent": true,
-    "searchLayers":[{
-        "id": "Incidents",
-        "fields": ["Incident Type", "Province", "Company", "Status", "Substance"]
-    }],
+    "searchLayers":[{}],
     //Add the home extent button to the toolbar
     "home": true,
     //Add the geolocation button on the toolbar. Only displayed if browser supports geolocation
@@ -84,7 +81,7 @@ define({
     //When true display a scalebar on the map
     "scalebar": true,
     //Specify a title for the application. If not provided the web map title is used.
-    "title": "",
+    "title": "Map Groups",
     "level": null,
     "center": null,
     //Replace these with your own bitly key

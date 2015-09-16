@@ -225,7 +225,50 @@ define(["dojo/Evented", "dojo/_base/declare", "dojo/_base/lang", "dojo/has", "es
                 }
                 this._setLayerEvents();
             }
+
+            // place groups here
+            var groupDiv = domConstruct.create("div", {
+                className: layerClass,
+                role: "listitem",
+            });
+            groupDiv.innerHTML="Groups:"
+            domConstruct.place(groupDiv, this._layersNode, "last");
+
+            // // title of layer
+            // var titleDiv = domConstruct.create("div", {
+            //     className: this.css.title,
+            // }, groupDiv);
+            
+            // // title container
+            // var titleContainerDiv = domConstruct.create("div", {
+            //     className: this.css.titleContainer,
+            //     tabindex: -1,
+            // }, titleDiv);
+
+            //config.defaults.io.proxyUrl = '../proxy/proxy.ashx';
+            portalUrl = document.location.protocol + '//www.arcgis.com';
+
+            // //create the portal
+            // var portal = new arcgisPortal.Portal(portalUrl);
+
+            // on(portal, 'load', function(p) {
+            //     var data = findArcGISGroup(portal);
+            // });
         },
+
+        // findArcGISGroup: function (portal) {
+        //   var keyword = ''; //dom.byId('groupFinder').value;
+        //   var params = {
+        //     q:  keyword,
+        //     sortField:'modified',
+        //     sortOrder:'desc',
+        //     num:20  //find 20 items - max is 100
+        //   };
+        //   portal.queryGroups(params).then(function (data) {
+        //     //showGroupResults(data);
+        //     return data;
+        //   });
+        // },
 
         _atachSpaceKey: function(onButton, clickButton) {
             on(onButton, 'keyup', lang.hitch(clickButton, function(event){
